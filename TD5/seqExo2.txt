@@ -1,0 +1,3 @@
+AAAAATTTCCGTTGACTAAACCGTGTTGCCAAAATCCGTCCATCC
+Pourcentage de A:31.11%
+La longeur de la sequance est : 45
