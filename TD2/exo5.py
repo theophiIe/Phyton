@@ -1,4 +1,4 @@
-print "ecrire un entier :"
+print "ecrire un entier :",
 var = int(input())
 
 if var%2 == 0 :
