@@ -1,4 +1,4 @@
-print "Ecrire une chaine de caratere"
+print "Ecrire une chaine de caratere :",
 sequence = raw_input()
 i = 0
 

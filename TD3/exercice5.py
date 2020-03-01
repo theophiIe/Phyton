@@ -1,4 +1,5 @@
 sequence = raw_input("la sequance : ")
+sequence = sequence.upper()
 sequenceTranscrit = ""
 
 i = 0

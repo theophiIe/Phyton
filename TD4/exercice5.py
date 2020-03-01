@@ -32,5 +32,5 @@ if inver == sequence :
 else :
 	print "N'est pas un palindrome"
 
-#Autre façon de faire le programme 
+#Autre facon de faire le programme 
 #seq[i]+seq[len(seq)-1-i] in "AT/TA/GC/CG"

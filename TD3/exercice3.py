@@ -1,4 +1,4 @@
-print "Ecrire une chaine de caratere"
+print "Ecrire une chaine de caratere :",
 sequence = raw_input()
 i = 0
 cmptC = 0
@@ -13,5 +13,5 @@ while i<len(sequence):
 		cmptM = cmptM + 1
 	i = i + 1
 
-print "Nombre de cysteine : ", cmptC
-print "Nombre de metianine : ", cmptM
+print "Nombre de cysteine :", cmptC
+print "Nombre de metianine :", cmptM

@@ -1,6 +1,6 @@
-print "premiere chaine de caractere :"
+print "premiere chaine de caractere :",
 chaine1 = raw_input()
-print "seconde chaine de caractere :"
+print "seconde chaine de caractere :",
 chaine2 = raw_input()
 
 if chaine1.count(chaine2) > 0 : 
