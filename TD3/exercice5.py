@@ -13,4 +13,4 @@ while i < len(sequence) :
 	
 	i = i + 1
 	
-print ("La chaine transcrite est : ", sequenceTranscrit)
+print "La chaine transcrite est : ",sequenceTranscrit
