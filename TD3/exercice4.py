@@ -1,5 +1,6 @@
-print "Ecrire une chaine de caratere"
+print "Ecrire une chaine de caratere :",
 sequence = raw_input()
+
 i = 0
 nbreA = 0.0
 nbreC = 0.0
@@ -21,7 +22,7 @@ while i < len(sequence):
 	
 	i = i + 1
 
-print "Pourcentage de A:", round(nbreA/len(sequence)*100,2),"%"
-print "Pourcentage de C:", round(nbreC/len(sequence)*100,2),"%"
-print "Pourcentage de G:", round(nbreG/len(sequence)*100,2),"%"
-print "Pourcentage de T:", round(nbreT/len(sequence)*100,2),"%"
+print "Pourcentage de A :", round(nbreA/len(sequence)*100,2),"%"
+print "Pourcentage de C :", round(nbreC/len(sequence)*100,2),"%"
+print "Pourcentage de G :", round(nbreG/len(sequence)*100,2),"%"
+print "Pourcentage de T :", round(nbreT/len(sequence)*100,2),"%"
