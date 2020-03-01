@@ -1,6 +1,6 @@
-print "longueur"
+print "longueur :",
 longueur = input()
-print "largeur"
+print "largeur :",
 largeur = input()
 aire = longueur*largeur
-print "L'aire du rectangle : ", aire
+print "L'aire du rectangle :", aire

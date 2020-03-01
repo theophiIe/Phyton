@@ -1,3 +1,6 @@
+#Exercice a finir
+#Reussir a retrouver le nombre d'occurence de sequence nucleique dans le fichier seq.txt
+#Le faire sans utiliser find
 while(1):
 	nameFile = raw_input("Le nom du fichier : ")
 	try : 
