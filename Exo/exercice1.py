@@ -19,91 +19,110 @@ stop.extend(stopTGA)
 stop.extend(stopTAG)
 stop = sorted(stop)
 
+cmpt = 0
+for cmpt in stop:
+	print seq[stop[cmpt]:stop[cmpt]+3]
+	#cmpt = cmpt + 1
+
 # recherche du premier codon stop, recherche du start puis recherche condon stop
 
 # PAS DE DECALAGE 
 x = 0
 y = 0
 
-#for cmpt in range(0, len(stop)) :
-while ( x <= len(stop) or y <= len(start) ) :
+while ( x < len(stop) and y < len(start) ) :
 
 	valStop = stop[x] % 3
 	valStart = start[y] % 3
 
-	# pas de decalage 
-	if  ( valStart == 0 and valStop == 0 ) and ( start[y] > stop[x] ) :
+	if  (valStart == 0 and valStop == 0) and (start[y] > stop[x]) :
+		
 		x = x + 1
-		print "test"
-		while  valStop != 0 or len(stop) < x :
+		valStop = stop[x] % 3
+		
+		while  valStop != 0 :
 			valStop = stop[x] % 3
-			
-			if valStop == 0 :
-				print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 1)
+			if valStop == 0 and start[y] < stop[x]:
+				print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 3)
+				break
+				
+			elif valStop == 0 and start[y] > stop[x]:
 				break
 				
 			x = x + 1
 	
+	elif valStop != 0 :
+		x = x + 1
+		
 	else :
-		y = y + 1	
+		y = y +1
 
 
 #~ #####################################################################################################################
 
 #~ #DECALAGE DE 1
-#~ cmpt = 0
-#~ x = 0
-#~ y = 0
+print "\nphase 2"
+x = 0
+y = 0
 
-#~ for cmpt in range(0, len(stop)) :
-	
-	#~ valStart = start[y] % 3
-	#~ valStop = stop[x] % 3
+while ( x < len(stop) and y < len(start) ) :
+
+	valStop = stop[x] % 3
+	valStart = start[y] % 3
+
+	if  (valStart == 1 and valStop == 1) and (start[y] > stop[x]) :
 		
-	#~ # decalage de 1
-	#~ if  ( valStart ==  1 and valStop == 1 ) and ( start[y] > stop[x] ) : 
-		#~ while  valStop != 0 or len(stop) < x :
-			#~ x = x + 1
-			#~ valStop = stop[x] % 3
-			
-			#~ if valStop == 0 :
-				#~ print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 1)
-				#~ break
+		x = x + 1
+		valStop = stop[x] % 3
+		
+		while  valStop != 1 :
+			valStop = stop[x] % 3
+			if valStop == 1 and start[y] < stop[x]:
+				print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 3)
+				break
 				
-		#~ y = y + 1
+			elif valStop == 1 and start[y] > stop[x]:
+				break
+				
+			x = x + 1
+	
+	elif valStop != 1 :
+		x = x + 1
+		
+	else :
+		y = y +1
 
 #~ #####################################################################################################################
 
 #~ #DECALAGE DE 1
-#~ cmpt = 0
-#~ x = 0
-#~ y = 0
+print "\nphase 3"
+x = 0
+y = 0
 
-#~ for cmpt in range(0, len(stop)) :
-	
-	#~ valStart = start[y] % 3
-	#~ valStop = stop[x] % 3
-		
-	#~ # decalage de 2 
-	#~ if  ( valStart ==  2 and valStop == 2 ) and ( start[y] > stop[x] ) : 
-		#~ while  valStop != 0 or len(stop) < x :
-			#~ x = x + 1
-			#~ valStop = stop[x] % 3
-			
-			#~ if valStop == 0 :
-				#~ print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 1)
-				#~ break
-		
-		#~ y = y + 1
-		
-	#~ y = y+1
-	
-	
-#~ for cmpt in range(0,len(stop)):
-	#~ valStart = start[i] % 3
-	#~ valStop = stop[cmpt] % 3
+while ( x < len(stop) and y < len(start) ) :
 
-	#~ if valStart == valStop :
-		#~ print "position start : " + str(start[i]+1) + "\t position du codon stop : " + str(stop[cmpt]+1)
-		#~ i = i+1
+	valStop = stop[x] % 3
+	valStart = start[y] % 3
+
+	if  (valStart == 2 and valStop == 2) and (start[y] > stop[x]) :
+		
+		x = x + 1
+		valStop = stop[x] % 3
+		
+		while  valStop != 2 and x <= len(stop)-1:
+			valStop = stop[x] % 3
+			if valStop == 2 and start[y] < stop[x]:
+				print "position start : " + str(start[y] + 1) + "\t position du codon stop : " + str(stop[x] + 3)
+				break
+				
+			elif valStop == 2 and start[y] > stop[x]:
+				break
+				
+			x = x + 1
+	
+	elif valStop != 2 :
+		x = x + 1
+		
+	else :
+		y = y +1
 	
